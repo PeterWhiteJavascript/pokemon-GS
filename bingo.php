@@ -103,7 +103,7 @@
                             }
                         }
                         allPokemon.push(allPokemon.shift());
-                        if(numSinceLastAdded === numOfPokemon * 2) {
+                        if(numSinceLastAdded === numOfPokemon * 3) {
                             alert("Your criteria is yieilding a 0 result. Change it and try again.");
                             return;
                         }
@@ -282,7 +282,7 @@
                                 var splitxPos = splitid % numberInRow * tileX - tileX;
                                 var splityPos = ~~((splitid - 1) / numberInRow) * tileY;
                                 bingoItem.append("<div class='pokemon-id small-text'>"+"#"+id+" / #"+splitid+"</div>");
-                                bingoItem.append("<div class='pokemon-sprite-placeholder'></div><div class='pokemon-sprite-split'><div class='pokemon-sprite' style='background-position:"+-xPos+"px "+-yPos+"px; width:46px;'></div>"+"<div class='pokemon-sprite' style='background-position:"+-(splitxPos + 10)+"px "+-splityPos+"px; width:46px;'></div></div>")
+                                bingoItem.append("<div class='pokemon-sprite-placeholder'></div><div class='pokemon-sprite-split'><div class='pokemon-sprite flipped-image' style='background-position:"+-xPos+"px "+-yPos+"px; position:absolute; right:20px;'></div>"+"<div class='pokemon-sprite' style='background-position:"+-splitxPos+"px "+-splityPos+"px; position:absolute; left:20px;'></div></div>")
                                 bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name.substring(0, 5)+"/"+splitPokemon.name.substring(0, 5)+"</div>");
                                 bingoCard.append(bingoItem);
                             } else {
