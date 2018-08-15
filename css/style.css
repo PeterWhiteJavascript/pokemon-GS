@@ -102,12 +102,19 @@ html, body{
     background-color: #ffeead;
     border-radius: 5px;
 }
+.pokemon-sprite-placeholder{
+    width: 56px;
+    height:56px;
+}
 .pokemon-sprite{
     width: 56px;
     height:56px;
     background: url(../images/pokemon.png);
     mix-blend-mode: multiply;
-    
+}
+.pokemon-sprite-split{
+    position:absolute;
+    display:flex;
 }
 .bingo-item:nth-child(2n){
     background-color:#f2e394;

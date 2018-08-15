@@ -27,11 +27,11 @@
                 <div>Medium</div><input type='checkbox' checked="true">
                 <div>Difficult</div><input type='checkbox' checked="true">
                 <div>Y tho?</div><input type='checkbox'>
-                <div class="pre-select">D Spread</div><select><option selected>Evenly</option><option>Random</option><option>Favour Easy</option><option>Favour Medium</option><option>Favour Hard</option></select>
+                <div class="pre-select">D Spread</div><select><option>Evenly</option><option>Random</option><option selected>Favour Easy</option><option>Favour Medium</option><option>Favour Hard</option></select>
             </div>
             <div id="evolve" class="filter-container">
                 <div class="big-text">Evolution</div>
-                <div class="pre-select">Frequency</div><select><option>None</option><option>Some</option><option selected>Average</option><option>Many</option><option>All</option></select>
+                <div class="pre-select">Frequency</div><select><option>None</option><option selected>Some</option><option>Average</option><option>Many</option><option>All</option></select>
             </div>
             <div id="time" class="filter-container">
                 <div class="big-text">Time</div>
@@ -45,8 +45,8 @@
                 <div>Starter Pokemon</div><input type='checkbox'>
                 <div>Legendary Dogs</div><input type='checkbox' checked="true">
                 <div>Legendary Birds</div><input type='checkbox' checked="true">
-                <div class="pre-select">Exclusives</div><select><option selected>None</option><option>Include</option><option>Split</option></select>
-                <div class="pre-select">Grid Size</div><select><option>3x3</option><option>4x4</option><option selected>5x5</option><option>6x6</option><option>7x7</option><option>8x8</option></select>
+                <div class="pre-select">Exclusives</div><select><option>None</option><option>Include</option><option selected>Split</option></select>
+                <div class="pre-select">Grid Size</div><select><option>3x3</option><option selected>5x5</option><option>7x7</option></select>
             </div>
         </div>
         <div id="main-container">
@@ -79,16 +79,22 @@
                             var number = howManyInEachRegion[i];
                             if(number === 0) continue;
                             var regionData = poke.region[region];
-                            if(!(regionData instanceof Array)){
+                            if(!(regionData instanceof Array) && ((numOfEvos === 0 && !regionData.evoOnly) || (numOfEvos > 0 && regionData.evoOnly))){
                                 var lowestDifficulty = Math.min(regionData.Morn || 100, regionData.Day || 100, regionData.Nite || 100);
-                                if(lowestDifficulty === 100 && regionData.evoOnly){
-                                    lowestDifficulty =  regionData.evoDiff;
+                                //If there is no way to find it in the wild
+                                if(lowestDifficulty === 100){
+                                    if(poke.tag === "Starter" || regionData.specEnc === "Gift" || regionData.specEnc === "Event" || regionData.specEnc === "Trade") lowestDifficulty = 1;
+                                    if(regionData.specEnc === "Hatch Egg") lowestDifficulty = 2;
+                                    if(poke.tag === "Legendary Dog" || poke.tag === "Legendary Bird") lowestDifficulty = 3;
+                                    if(regionData.evoOnly) lowestDifficulty =  regionData.evoDiff;
+                                    
                                 }
+                                
                                 var difIdx = difficulty.indexOf(lowestDifficulty);
                                 if(difIdx >= 0 && difficultySpread[difIdx] > 0){
-                                    if(numOfEvos > 0 && regionData.evoOnly){
+                                    if(regionData.evoOnly){
                                         numOfEvos--;
-                                    } 
+                                    }
                                     number--;
                                     difficultySpread[difIdx]--;
                                     pokemon.push(poke);
@@ -97,12 +103,47 @@
                             }
                         }
                         allPokemon.push(allPokemon.shift());
-                        if(numSinceLastAdded === numOfPokemon) {
+                        if(numSinceLastAdded === numOfPokemon * 2) {
                             alert("Your criteria is yieilding a 0 result. Change it and try again.");
                             return;
                         }
                     }
                     return shuffleArray(pokemon);
+                }
+                function getOtherVersionExclusive(pokemon){
+                    function findPokemon(name){
+                        return data.pokemon.find(function(poke){return poke.name === name;});
+                    }
+                    switch(pokemon.name){
+                        case "Ekans":
+                            return [pokemon, findPokemon("Sandshrew")];
+                        case "Arbok":
+                            return [pokemon, findPokemon("Sandslash")];
+                        case "Sandshrew":
+                            return [findPokemon("Ekans"), pokemon];
+                        case "Sandslash":
+                            return [findPokemon("Arbok"), pokemon];
+                        case "Meowth":
+                            return [pokemon, findPokemon("Mankey")];
+                        case "Persian":
+                            return [pokemon, findPokemon("Primeape")];
+                        case "Mankey":
+                            return [findPokemon("Meowth"), pokemon];
+                        case "Primeape":
+                            return [findPokemon("Persian"), pokemon];
+                        case "Ledyba":
+                            return [pokemon, findPokemon("Spinarak")];
+                        case "Ledian":
+                            return [pokemon, findPokemon("Ariados")];
+                        case "Spinarak":
+                            return [findPokemon("Ledyba"), pokemon];
+                        case "Ariados":
+                            return [findPokemon("Ledian"), pokemon];
+                        case "Growlithe":
+                            return [findPokemon("Vulpix"), pokemon];
+                        case "Vulpix":
+                            return [findPokemon("Growlithe"), pokemon];
+                    }
                 }
                 function allSelectedIdxs(inputs){
                     return $.map(inputs.filter(function(){return $(this).prop("checked");}), function(elm){return $(elm).parent().children("input").index(elm);});
@@ -213,28 +254,46 @@
                             levelsOfDifficulty = spreadRandomly(difficulty, numPokemon);
                             break;
                         case "Favour Easy":
-                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 0);
-                            break;
-                        case "Favour Medium":
                             levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 1);
                             break;
-                        case "Favour Hard":
+                        case "Favour Medium":
                             levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 2);
+                            break;
+                        case "Favour Hard":
+                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 3);
                             break;
                     }
                     var pokemonToDisplay = generatePokemon(filteredPokemon, pokemonInEachRegion, regions, levelsOfDifficulty, difficulty, evoSpread, numPokemon);
                     bingoCard.empty();
+                    if(!pokemonToDisplay) return;
                     for(var i = 0;i < y; i++){
                         for(var j = 0; j < x; j++){
-                            var bingoItem = $("<div class='bingo-item flex-vertical-aligned'><div class='pokemon-id small-text'></div><div class='pokemon-sprite'></div><div class='pokemon-name small-text'></div></div>");
+                            var bingoItem = $("<div class='bingo-item flex-vertical-aligned'></div>");
                             var pokemon = pokemonToDisplay[i + j * x];
-                            var id = pokemon.id;
-                            var xPos = id % numberInRow * tileX - tileX;
-                            var yPos = ~~((id - 1) / numberInRow) * tileY;
-                            bingoItem.children(".pokemon-id").text("#"+id);
-                            bingoItem.children(".pokemon-sprite").css("background-position", -xPos+"px "+-yPos+"px");
-                            bingoItem.children(".pokemon-name").text(pokemon.name);
-                            bingoCard.append(bingoItem);
+                            
+                            if(pokemon.tag === "Version Exclusive" && exclusives === "Split"){
+                                var splits = getOtherVersionExclusive(pokemon);
+                                pokemon = splits[0];
+                                var id = pokemon.id;
+                                var xPos = id % numberInRow * tileX - tileX;
+                                var yPos = ~~((id - 1) / numberInRow) * tileY;
+                                var splitPokemon = splits[1];
+                                var splitid = splitPokemon.id;
+                                var splitxPos = splitid % numberInRow * tileX - tileX;
+                                var splityPos = ~~((splitid - 1) / numberInRow) * tileY;
+                                bingoItem.append("<div class='pokemon-id small-text'>"+"#"+id+" / #"+splitid+"</div>");
+                                bingoItem.append("<div class='pokemon-sprite-placeholder'></div><div class='pokemon-sprite-split'><div class='pokemon-sprite' style='background-position:"+-xPos+"px "+-yPos+"px; width:46px;'></div>"+"<div class='pokemon-sprite' style='background-position:"+-(splitxPos + 10)+"px "+-splityPos+"px; width:46px;'></div></div>")
+                                bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name.substring(0, 5)+"/"+splitPokemon.name.substring(0, 5)+"</div>");
+                                bingoCard.append(bingoItem);
+                            } else {
+                                var id = pokemon.id;
+                                var xPos = id % numberInRow * tileX - tileX;
+                                var yPos = ~~((id - 1) / numberInRow) * tileY;
+                                bingoItem.append("<div class='pokemon-id small-text'>"+"#"+id+"</div>");
+                                bingoItem.append("<div class='pokemon-sprite' style='background-position:"+-xPos+"px "+-yPos+"px;'></div>");
+                                bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name+"</div>");
+                                bingoCard.append(bingoItem);
+                            }
                         }
                     }
                     $("#main-container").css("width", (x*100)+"px");
@@ -243,7 +302,7 @@
                 generateBingoCard();
                 $("#create-new-bingo-card").on("click",function(){
                     generateBingoCard();
-                })
+                });
             });
         </script>
     </body>

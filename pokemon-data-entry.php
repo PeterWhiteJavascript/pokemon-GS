@@ -211,7 +211,7 @@
                                 if($(this).val().length === 0) allFilled = false; 
                             });
                             if(allFilled){ 
-                                createItem()
+                                createItem();
                                 $(this).children("input").off("change");
                             };
                         });
