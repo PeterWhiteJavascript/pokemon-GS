@@ -1,0 +1,193 @@
+html, body{
+    width:100%;
+    height:100%;
+    padding:0;
+    margin:0;
+}
+#audio-player{
+    top:10px;
+    left:10px;
+    position:absolute;
+    border-radius:5px;
+    padding:10px;
+    cursor:pointer;
+    user-select:none;
+    width:140px;
+}
+#background-title{
+    width:100%;
+    height:100%;
+    background-image: url(https://trilobluo.files.wordpress.com/2017/09/gold-silver.jpg);
+    filter: brightness(25%);
+}
+#background-bingo{
+    width:100%;
+    height:100%;
+    background-size: 100% 100%;
+    background-image: url(https://i.imgur.com/FgZDln2.jpg?1);
+    filter: brightness(25%);
+}
+#create-new-bingo-card{
+    top:10px;
+    left:180px;
+    position:absolute;
+    border-radius:5px;
+    padding:10px;
+    cursor:pointer;
+    user-select:none;
+    width:200px;
+}
+#filters{
+    top:60px;
+    left:10px;
+    position:absolute;
+    border-radius:5px;
+    padding:10px;
+    background-color:#ffeead;
+    width:16%;
+}
+.filter-container{
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color:#f2e394;
+    padding:10px;
+}
+.filter-container div:not(.big-text):not(.pre-select){
+    width:90%;
+}
+.pre-select{
+    width:50%;
+}
+.filter-container input{
+    width:10%;
+    padding:0;
+    margin: 0;
+}
+.filter-container select{
+    width:50%;
+    padding:0;
+    margin: 0;
+}
+#directory-container{
+    width:25%;
+    height:50%;
+    left:50%;
+    top:25%;
+    position:absolute;
+    background-color:#f2e394;
+    border-radius: 20px;
+    transform:translate( -50%, 0);
+}
+#main-container{
+    width:500px;
+    height:500px;
+    left:50%;
+    top:60px;
+    position:absolute;
+    background-color:#f2e394;
+    border-radius: 20px;
+    transform:translate( -50%, 0);
+}
+#bingo-card{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.bingo-item{
+    width:100px;
+    height:100px;
+    background-color: #ffeead;
+    border-radius: 5px;
+}
+.pokemon-sprite{
+    width: 56px;
+    height:56px;
+    background: url(../images/pokemon.png);
+    mix-blend-mode: multiply;
+    
+}
+.bingo-item:nth-child(2n){
+    background-color:#f2e394;
+}
+.flex-centered{
+    display:flex;
+    justify-content: center;
+}
+.flex-centered div{
+    align-self: center;
+    text-align:center;
+}
+
+.flex-vertical-aligned{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.flex-vertical-aligned div{
+    align-self: center;
+    text-align:center;
+}
+
+.big-text{
+    font-size:26px;
+    font-family: "Consolas";
+    width:100%;
+    text-align: center;
+    background: linear-gradient(#f2e394, #f2ae72);
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    margin-bottom: 10px;
+}
+.normal-text{
+    font-size:22px;
+    font-family: "Consolas";
+}
+
+.small-text{
+    font-size:0.9vw;
+    font-family: "Consolas";
+}
+.directory-heading{
+    height:75px;
+    font-size:26px;
+    font-family: "Times New Roman";
+    background: linear-gradient(#96ceb4, #588c7e);
+    border-top-left-radius:19px;
+    border-top-right-radius:19px;
+}
+.directory-item{
+    height:50px;
+    
+}
+.directory-item > div{
+    border:1px solid black;
+    width:50%;
+    border-radius:5px;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+}
+.clickable{
+    background-color:#ffeead;
+}
+.clickable:link {
+    color: black;
+}
+
+.clickable:visited {
+    color: black;
+}
+
+.clickable:hover {
+    background-color:#96ceb4;
+}
+
+.clickable:active {
+    background-color:#588c7e;
+}
