@@ -1,6 +1,250 @@
 {
     "pokemon": [
         {
+            "id": 250,
+            "name": "Ho-Oh",
+            "tag": "Legendary Bird",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 249,
+            "name": "Lugia",
+            "tag": "Legendary Bird",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 248,
+            "name": "Tyranitar",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 55,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 247,
+            "name": "Pupitar",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 30,
+                    "evoDiff": 3,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 246,
+            "name": "Larvitar",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 20,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 245,
+            "name": "Suicune",
+            "tag": "Legendary Dog",
+            "region": [
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 244,
+            "name": "Entei",
+            "tag": "Legendary Dog",
+            "region": [
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 243,
+            "name": "Raikou",
+            "tag": "Legendary Dog",
+            "region": [
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 242,
+            "name": "Blissey",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 25,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
             "id": 241,
             "name": "Miltank",
             "tag": "Normal",
@@ -17,6 +261,114 @@
                 },
                 [],
                 [],
+                []
+            ]
+        },
+        {
+            "id": 240,
+            "name": "Magby",
+            "tag": "Normal",
+            "region": [
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 3,
+                    "specEnc": "Hatch Egg"
+                },
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 2,
+                    "specEnc": "Hatch Egg"
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 239,
+            "name": "Elekid",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 4,
+                    "specEnc": "Hatch Egg"
+                }
+            ]
+        },
+        {
+            "id": 238,
+            "name": "Smoochum",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 4,
+                    "specEnc": "Hatch Egg"
+                },
+                []
+            ]
+        },
+        {
+            "id": 237,
+            "name": "Hitmontop",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 20,
+                    "evoDiff": 3,
+                    "specEnc": "Gift"
+                },
+                []
+            ]
+        },
+        {
+            "id": 236,
+            "name": "Tyrogue",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 10,
+                    "evoDiff": 0,
+                    "specEnc": "Gift"
+                },
                 []
             ]
         },
@@ -69,15 +421,183 @@
             ]
         },
         {
-            "id": 226,
-            "name": "Mantine",
+            "id": 232,
+            "name": "Donphan",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 231,
+            "name": "Phanpy",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 20,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 229,
+            "name": "Houndoom",
             "tag": "Normal",
             "region": [
                 [],
                 [],
                 [],
                 [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 3,
+                    "evoOnly": 1,
+                    "firstLv": 24,
+                    "evoDiff": 3,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 228,
+            "name": "Houndour",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 15,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 227,
+            "name": "Skarmory",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 27,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 []
+            ]
+        },
+        {
+            "id": 226,
+            "name": "Mantine",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 24,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 225,
+            "name": "Delibird",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 22,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 224,
+            "name": "Octillery",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 40,
+                    "evoDiff": 1,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 223,
+            "name": "Remoraid",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": "Super Rod"
+                }
             ]
         },
         {
@@ -87,9 +607,173 @@
             "region": [
                 [],
                 [],
-                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 0,
+                    "evoOnly": 0,
+                    "firstLv": 20,
+                    "evoDiff": 0,
+                    "specEnc": "Good Rod"
+                },
                 [],
                 []
+            ]
+        },
+        {
+            "id": 221,
+            "name": "Piloswine",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 33,
+                    "evoDiff": 4,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 33,
+                    "evoDiff": 3,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 220,
+            "name": "Swinub",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 23,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 219,
+            "name": "Magcargo",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 38,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 218,
+            "name": "Slugma",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 1,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 27,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 217,
+            "name": "Ursaring",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 216,
+            "name": "Teddiursa",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 20,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 215,
+            "name": "Sneasel",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
             ]
         },
         {
@@ -138,6 +822,26 @@
                 },
                 [],
                 []
+            ]
+        },
+        {
+            "id": 211,
+            "name": "Quilfish",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": "Super Rod"
+                }
             ]
         },
         {
@@ -193,6 +897,26 @@
                 },
                 [],
                 [],
+                []
+            ]
+        },
+        {
+            "id": 207,
+            "name": "Gligar",
+            "tag": "Version Exclusive",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": null,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 []
             ]
         },
@@ -301,6 +1025,26 @@
             ]
         },
         {
+            "id": 202,
+            "name": "Wobuffet",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 25,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
             "id": 201,
             "name": "Unown",
             "tag": "Normal",
@@ -321,6 +1065,46 @@
             ]
         },
         {
+            "id": 200,
+            "name": "Misdreavus",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 45,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 198,
+            "name": "Murkrow",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 28,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
             "id": 197,
             "name": "Umbreon",
             "tag": "Normal",
@@ -329,7 +1113,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 0,
+                    "Nite": 3,
                     "evoOnly": 1,
                     "firstLv": 11,
                     "evoDiff": 4,
@@ -338,7 +1122,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 0,
+                    "Nite": 3,
                     "evoOnly": 1,
                     "firstLv": 11,
                     "evoDiff": 4,
@@ -347,7 +1131,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 0,
+                    "Nite": 3,
                     "evoOnly": 1,
                     "firstLv": 11,
                     "evoDiff": 3,
@@ -364,7 +1148,7 @@
                 [],
                 {
                     "Morn": 0,
-                    "Day": 0,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 11,
@@ -373,7 +1157,7 @@
                 },
                 {
                     "Morn": 0,
-                    "Day": 0,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 11,
@@ -382,7 +1166,7 @@
                 },
                 {
                     "Morn": 0,
-                    "Day": 0,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 11,
@@ -460,12 +1244,12 @@
                 [],
                 {
                     "Morn": 0,
-                    "Day": 0,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 13,
                     "evoDiff": 4,
-                    "specEnc": false
+                    "specEnc": "Bug Catching Contest"
                 },
                 [],
                 [],
@@ -518,8 +1302,8 @@
             "tag": "Normal",
             "region": [
                 {
-                    "Morn": 0,
-                    "Day": 0,
+                    "Morn": 3,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 27,
@@ -527,8 +1311,8 @@
                     "specEnc": false
                 },
                 {
-                    "Morn": 0,
-                    "Day": 0,
+                    "Morn": 3,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 27,
@@ -536,8 +1320,8 @@
                     "specEnc": false
                 },
                 {
-                    "Morn": 0,
-                    "Day": 0,
+                    "Morn": 3,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 27,
@@ -554,8 +1338,8 @@
             "tag": "Normal",
             "region": [
                 {
-                    "Morn": 0,
-                    "Day": 0,
+                    "Morn": 3,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 18,
@@ -563,8 +1347,8 @@
                     "specEnc": false
                 },
                 {
-                    "Morn": 0,
-                    "Day": 0,
+                    "Morn": 3,
+                    "Day": 3,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 18,
@@ -657,6 +1441,26 @@
             ]
         },
         {
+            "id": 182,
+            "name": "Bellossom",
+            "tag": "Normal",
+            "region": [
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 21,
+                    "evoDiff": 4,
+                    "specEnc": "Bug Catching Contest"
+                },
+                [],
+                [],
+                []
+            ]
+        },
+        {
             "id": 181,
             "name": "Ampharos",
             "tag": "Normal",
@@ -742,6 +1546,34 @@
                     "evoOnly": 0,
                     "firstLv": 13,
                     "evoDiff": 0,
+                    "specEnc": false
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 178,
+            "name": "Xatu",
+            "tag": "Normal",
+            "region": [
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 25,
+                    "evoDiff": 1,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 25,
+                    "evoDiff": 1,
                     "specEnc": false
                 },
                 [],
@@ -849,13 +1681,109 @@
             ]
         },
         {
+            "id": 174,
+            "name": "Igglybuff",
+            "tag": "Normal",
+            "region": [
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 2,
+                    "specEnc": "Hatch Egg"
+                },
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 2,
+                    "specEnc": "Hatch Egg"
+                }
+            ]
+        },
+        {
+            "id": 173,
+            "name": "Cleffa",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 4,
+                    "specEnc": "Hatch Egg"
+                }
+            ]
+        },
+        {
+            "id": 172,
+            "name": "Pichu",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 4,
+                    "specEnc": "Hatch Egg"
+                }
+            ]
+        },
+        {
+            "id": 171,
+            "name": "Lanturn",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 27,
+                    "evoDiff": 3,
+                    "specEnc": "Good Rod"
+                },
+                [],
+                []
+            ]
+        },
+        {
             "id": 170,
             "name": "Chinchou",
             "tag": "Normal",
             "region": [
                 [],
                 [],
-                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 20,
+                    "evoDiff": 0,
+                    "specEnc": "Good Rod"
+                },
                 [],
                 []
             ]
@@ -1016,7 +1944,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 0,
+                    "Nite": 1,
                     "evoOnly": 1,
                     "firstLv": 20,
                     "evoDiff": 2,
@@ -1025,7 +1953,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 0,
+                    "Nite": 1,
                     "evoOnly": 1,
                     "firstLv": 20,
                     "evoDiff": 1,
@@ -1078,8 +2006,8 @@
             "tag": "Normal",
             "region": [
                 {
-                    "Morn": 0,
-                    "Day": 0,
+                    "Morn": 1,
+                    "Day": 1,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 15,
@@ -1537,6 +2465,66 @@
             ]
         },
         {
+            "id": 143,
+            "name": "Snorlax",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 50,
+                    "evoDiff": 0,
+                    "specEnc": "Event"
+                }
+            ]
+        },
+        {
+            "id": 142,
+            "name": "Aerodactyl",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 25,
+                    "evoDiff": 0,
+                    "specEnc": "Trade"
+                }
+            ]
+        },
+        {
+            "id": 137,
+            "name": "Porygon",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 20,
+                    "evoDiff": 4,
+                    "specEnc": "Gift"
+                }
+            ]
+        },
+        {
             "id": 133,
             "name": "Eevee",
             "tag": "Normal",
@@ -1685,7 +2673,7 @@
                     "evoOnly": 0,
                     "firstLv": 14,
                     "evoDiff": 0,
-                    "specEnc": false
+                    "specEnc": "Bug Catching Contest"
                 },
                 [],
                 [],
@@ -1713,6 +2701,46 @@
             ]
         },
         {
+            "id": 125,
+            "name": "Electabuzz",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 2,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 17,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 124,
+            "name": "Jynx",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 2,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 22,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
             "id": 123,
             "name": "Scyther",
             "tag": "Normal",
@@ -1725,11 +2753,51 @@
                     "evoOnly": 0,
                     "firstLv": 14,
                     "evoDiff": 0,
-                    "specEnc": false
+                    "specEnc": "Bug Catching Contest"
                 },
                 [],
                 [],
                 []
+            ]
+        },
+        {
+            "id": 122,
+            "name": "Mr. Mime",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 2,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 30,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 121,
+            "name": "Starmie",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": null,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
             ]
         },
         {
@@ -1739,7 +2807,15 @@
             "region": [
                 [],
                 [],
-                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 20,
+                    "evoDiff": 0,
+                    "specEnc": "Good Rod"
+                },
                 [],
                 []
             ]
@@ -1817,6 +2893,146 @@
             ]
         },
         {
+            "id": 117,
+            "name": "Seadra",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 24,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 116,
+            "name": "Horsea",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 24,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 115,
+            "name": "Kangaskhan",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 15,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 114,
+            "name": "Tangela",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 39,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 113,
+            "name": "Chansey",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 25,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 112,
+            "name": "Rhydon",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 42,
+                    "evoDiff": 4,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 111,
+            "name": "Rhyhorn",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 35,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
             "id": 110,
             "name": "Weezing",
             "tag": "Normal",
@@ -1873,6 +3089,126 @@
             ]
         },
         {
+            "id": 108,
+            "name": "Lickitung",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 26,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 107,
+            "name": "Hitmonchan",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 20,
+                    "evoDiff": 3,
+                    "specEnc": "Gift"
+                },
+                []
+            ]
+        },
+        {
+            "id": 106,
+            "name": "Hitmonlee",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 20,
+                    "evoDiff": 3,
+                    "specEnc": "Gift"
+                },
+                []
+            ]
+        },
+        {
+            "id": 105,
+            "name": "Marowak",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 28,
+                    "evoDiff": 3,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 104,
+            "name": "Cubone",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 13,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 103,
+            "name": "Exeggutor",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": null,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
             "id": 102,
             "name": "Exeggcute",
             "tag": "Normal",
@@ -1888,6 +3224,46 @@
                     "specEnc": "Headbutt"
                 },
                 [],
+                [],
+                []
+            ]
+        },
+        {
+            "id": 101,
+            "name": "Electrode",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 23,
+                    "evoDiff": 0,
+                    "specEnc": "Event"
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 100,
+            "name": "Voltorb",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 5,
+                    "evoDiff": 3,
+                    "specEnc": "Event"
+                },
                 [],
                 []
             ]
@@ -2049,14 +3425,110 @@
             ]
         },
         {
-            "id": 90,
-            "name": "Shellder",
+            "id": 91,
+            "name": "Cloyster",
             "tag": "Normal",
             "region": [
                 [],
                 [],
                 [],
                 [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": null,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 90,
+            "name": "Shellder",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 20,
+                    "evoDiff": 0,
+                    "specEnc": "Good Rod"
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 89,
+            "name": "Muk",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 30,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 88,
+            "name": "Grimer",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": null,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 87,
+            "name": "Dewgong",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 34,
+                    "evoDiff": 4,
+                    "specEnc": false
+                },
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 34,
+                    "evoDiff": 3,
+                    "specEnc": false
+                },
                 []
             ]
         },
@@ -2067,8 +3539,56 @@
             "region": [
                 [],
                 [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 24,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                [],
+                []
+            ]
+        },
+        {
+            "id": 85,
+            "name": "Dodrio",
+            "tag": "Normal",
+            "region": [
                 [],
                 [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 0,
+                    "evoOnly": 0,
+                    "firstLv": 43,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 84,
+            "name": "Doduo",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 0,
+                    "evoOnly": 0,
+                    "firstLv": 41,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 []
             ]
         },
@@ -2197,6 +3717,46 @@
             ]
         },
         {
+            "id": 78,
+            "name": "Rapidash",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 42,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
+            "id": 77,
+            "name": "Ponyta",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
             "id": 75,
             "name": "Graveller",
             "tag": "Normal",
@@ -2259,7 +3819,15 @@
                     "evoDiff": 0,
                     "specEnc": "Old Rod"
                 },
-                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 40,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 [],
                 []
             ]
@@ -2287,9 +3855,37 @@
                     "evoDiff": 0,
                     "specEnc": false
                 },
-                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 24,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 [],
                 []
+            ]
+        },
+        {
+            "id": 71,
+            "name": "Victreebel",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": null,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
             ]
         },
         {
@@ -2315,7 +3911,15 @@
                     "evoDiff": 3,
                     "specEnc": false
                 },
-                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 24,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 [],
                 []
             ]
@@ -2335,7 +3939,15 @@
                     "specEnc": false
                 },
                 [],
-                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 22,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 [],
                 []
             ]
@@ -2429,6 +4041,26 @@
             ]
         },
         {
+            "id": 62,
+            "name": "Poliwrath",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": null,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
             "id": 61,
             "name": "Poliwhirl",
             "tag": "Normal",
@@ -2451,7 +4083,15 @@
                     "evoDiff": 0,
                     "specEnc": "Old Rod"
                 },
-                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 24,
+                    "evoDiff": 0,
+                    "specEnc": false
+                },
                 [],
                 []
             ]
@@ -2482,6 +4122,26 @@
                 [],
                 [],
                 []
+            ]
+        },
+        {
+            "id": 59,
+            "name": "Arcanine",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 16,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
             ]
         },
         {
@@ -2657,6 +4317,46 @@
             ]
         },
         {
+            "id": 51,
+            "name": "Dugtrio",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 2,
+                    "Day": 2,
+                    "Nite": 2,
+                    "evoOnly": 0,
+                    "firstLv": 29,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 50,
+            "name": "Diglett",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 1,
+                    "Day": 1,
+                    "Nite": 1,
+                    "evoOnly": 0,
+                    "firstLv": 19,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
             "id": 49,
             "name": "Venomoth",
             "tag": "Normal",
@@ -2761,6 +4461,26 @@
             ]
         },
         {
+            "id": 45,
+            "name": "Vileplume",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": null,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
             "id": 44,
             "name": "Gloom",
             "tag": "Normal",
@@ -2857,6 +4577,26 @@
             ]
         },
         {
+            "id": 40,
+            "name": "Wigglytuff",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 4,
+                    "evoDiff": 2,
+                    "specEnc": false
+                },
+                []
+            ]
+        },
+        {
             "id": 39,
             "name": "Jigglypuff",
             "tag": "Normal",
@@ -2877,6 +4617,26 @@
             ]
         },
         {
+            "id": 38,
+            "name": "Rapidash",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 16,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
             "id": 37,
             "name": "Vulpix",
             "tag": "Normal",
@@ -2893,6 +4653,66 @@
                 },
                 [],
                 [],
+                []
+            ]
+        },
+        {
+            "id": 36,
+            "name": "Clefable",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 8,
+                    "evoDiff": 3,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "name": "Clefairy",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 8,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "name": "Nidoking",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 16,
+                    "evoDiff": 2,
+                    "specEnc": false
+                },
                 []
             ]
         },
@@ -2941,6 +4761,26 @@
                 },
                 [],
                 [],
+                []
+            ]
+        },
+        {
+            "id": 31,
+            "name": "Nidoqueen",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 16,
+                    "evoDiff": 2,
+                    "specEnc": false
+                },
                 []
             ]
         },
@@ -3046,6 +4886,46 @@
                 [],
                 [],
                 []
+            ]
+        },
+        {
+            "id": 26,
+            "name": "Raichu",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 0,
+                    "Day": 0,
+                    "Nite": 0,
+                    "evoOnly": 1,
+                    "firstLv": 4,
+                    "evoDiff": 4,
+                    "specEnc": false
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "name": "Pikachu",
+            "tag": "Normal",
+            "region": [
+                [],
+                [],
+                [],
+                [],
+                {
+                    "Morn": 3,
+                    "Day": 3,
+                    "Nite": 3,
+                    "evoOnly": 0,
+                    "firstLv": 4,
+                    "evoDiff": 0,
+                    "specEnc": false
+                }
             ]
         },
         {

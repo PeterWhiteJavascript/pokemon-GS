@@ -143,7 +143,27 @@
                             return [findPokemon("Vulpix"), pokemon];
                         case "Vulpix":
                             return [findPokemon("Growlithe"), pokemon];
-                    }
+                        case "Delibird":
+                            return [findPokemon("Mantine"), pokemon];
+                        case "Mantine":
+                            return [pokemon, findPokemon("Delibird")];
+                        case "Lugia":
+                            return [pokemon, findPokemon("Ho-Oh")];
+                        case "Ho-Oh":
+                            return [pokemon, findPokemon("Lugia")];
+                        case "Gligar":
+                            return [pokemon, findPokemon("Skarmory")];
+                        case "Skarmory":
+                            return [pokemon, findPokemon("Gligar")];
+                        case "Teddiursa":
+                            return [pokemon, findPokemon("Phanpy")];
+                        case "Ursaring":
+                            return [pokemon, findPokemon("Donphan")];
+                        case "Phanpy":
+                            return [pokemon, findPokemon("Teddiursa")];
+                        case "Donphan":
+                            return [pokemon, findPokemon("Ursaring")];
+                    }   
                 }
                 function allSelectedIdxs(inputs){
                     return $.map(inputs.filter(function(){return $(this).prop("checked");}), function(elm){return $(elm).parent().children("input").index(elm);});
@@ -271,7 +291,7 @@
                             var bingoItem = $("<div class='bingo-item flex-vertical-aligned'></div>");
                             var pokemon = pokemonToDisplay[i + j * x];
                             
-                            if(pokemon.tag === "Version Exclusive" && exclusives === "Split"){
+                            if((pokemon.tag === "Version Exclusive" || pokemon.tag === "Legendary Bird") && exclusives === "Split"){
                                 var splits = getOtherVersionExclusive(pokemon);
                                 pokemon = splits[0];
                                 var id = pokemon.id;
