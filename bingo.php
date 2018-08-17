@@ -59,8 +59,6 @@
         <script>
             var bingoContainer = $("#main-container");
             var bingoCard = $("#bingo-card");
-            var rows = 5;
-            var cols = 5;
             var tileX = 56;
             var tileY = 56;
             //Number in row of spritesheet
@@ -71,13 +69,15 @@
                     var pokemon = [];
                     var numOfEvos = ~~(numOfPokemon * (evoSpread / 100));
                     var numSinceLastAdded = 0;
+                    var duplicationAllowedAfter = allPokemon.length * 2;
+                    var duplicatedTimes = 0;
                     while(pokemon.length < numOfPokemon){
                         numSinceLastAdded ++;
                         var poke = allPokemon[0];
                         for(var i = 0; i < regions.length; i++){
                             var region = regions[i];
-                            var number = howManyInEachRegion[i];
-                            if(number === 0) continue;
+                            var numberLeftInRegion = howManyInEachRegion[i];
+                            if(numberLeftInRegion === 0) continue;
                             var regionData = poke.region[region];
                             if(!(regionData instanceof Array) && ((numOfEvos === 0 && !regionData.evoOnly) || (numOfEvos > 0 && regionData.evoOnly))){
                                 var lowestDifficulty = Math.min(regionData.Morn || 100, regionData.Day || 100, regionData.Nite || 100);
@@ -92,18 +92,28 @@
                                 
                                 var difIdx = difficulty.indexOf(lowestDifficulty);
                                 if(difIdx >= 0 && difficultySpread[difIdx] > 0){
-                                    if(regionData.evoOnly){
-                                        numOfEvos--;
+                                    //Make sure that the pokemon does not exist already in the array
+                                    if(poke.added < duplicatedTimes){
+                                        if(regionData.evoOnly){
+                                            numOfEvos--;
+                                        }
+                                        numberLeftInRegion--;
+                                        difficultySpread[difIdx]--;
+                                        pokemon.push(poke);
+                                        numSinceLastAdded = 0;
+                                        poke.added = true;
+                                        shuffleArray(allPokemon);
                                     }
-                                    number--;
-                                    difficultySpread[difIdx]--;
-                                    pokemon.push(poke);
-                                    numSinceLastAdded = 0;
                                 }
                             }
                         }
+                        duplicationAllowedAfter --;
+                        if(duplicationAllowedAfter <= 0) {
+                            duplicationAllowedAfter = allPokemon.length * 2;
+                            duplicatedTimes ++;
+                        }
                         allPokemon.push(allPokemon.shift());
-                        if(numSinceLastAdded === numOfPokemon * 3) {
+                        if(numSinceLastAdded === allPokemon.length * 10) {
                             alert("Your criteria is yieilding a 0 result. Change it and try again.");
                             return;
                         }
@@ -144,25 +154,25 @@
                         case "Vulpix":
                             return [findPokemon("Growlithe"), pokemon];
                         case "Delibird":
-                            return [findPokemon("Mantine"), pokemon];
+                            return [pokemon, findPokemon("Mantine")];
                         case "Mantine":
-                            return [pokemon, findPokemon("Delibird")];
+                            return [findPokemon("Delibird"), pokemon];
                         case "Lugia":
                             return [pokemon, findPokemon("Ho-Oh")];
                         case "Ho-Oh":
-                            return [pokemon, findPokemon("Lugia")];
+                            return [findPokemon("Lugia"), pokemon];
                         case "Gligar":
                             return [pokemon, findPokemon("Skarmory")];
                         case "Skarmory":
-                            return [pokemon, findPokemon("Gligar")];
+                            return [findPokemon("Gligar"), pokemon];
                         case "Teddiursa":
                             return [pokemon, findPokemon("Phanpy")];
                         case "Ursaring":
                             return [pokemon, findPokemon("Donphan")];
                         case "Phanpy":
-                            return [pokemon, findPokemon("Teddiursa")];
+                            return [findPokemon("Teddiursa"), pokemon];
                         case "Donphan":
-                            return [pokemon, findPokemon("Ursaring")];
+                            return [findPokemon("Ursaring"), pokemon];
                     }   
                 }
                 function allSelectedIdxs(inputs){
@@ -172,7 +182,7 @@
                     var newArr = [];
                     var share = Math.floor(targetSum / arr.length);
                     for(var i = 0; i < arr.length; i++){
-                        if(i === 0) newArr.push(share + (targetSum % arr.length))
+                        if(i === 0) newArr.push(share + (targetSum % arr.length));
                         else newArr.push(share);
                     };
                     return newArr;
@@ -186,14 +196,10 @@
                 }
                 function spreadWithFavour(arr, targetSum, favouredIdx){
                     if(!arr.includes(favouredIdx + 1)) return spreadEvenly(arr, targetSum);
-                    var newArr = [];
-                    var fakeLength = arr.length + 1;
-                    var share = Math.floor(targetSum / fakeLength);
-                    for(var i = 0; i < arr.length; i++){
-                        if(i === favouredIdx) newArr.push(share + (targetSum % fakeLength));
-                        else newArr.push(share);
-                    };
-                    newArr[favouredIdx] += share;
+                    var share = Math.floor(targetSum / arr.length) / 2;
+                    var newArr = Array.from(Array(arr.length), () => share);
+                    newArr[favouredIdx] *= arr.length;
+                    newArr[favouredIdx] += (targetSum % share) + share;
                     return newArr;
                 }
                 //https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array/25984542
@@ -223,16 +229,19 @@
                                 foundWithinRegions = true;
                                 if((evolution === "None" && regionData.evoOnly) || (evolution === "All" && !regionData.evoOnly)) continue;
                                 if(!special.event && regionData.specEnc === "Event") continue;
-                                var canBeFoundBasedOnTimeDifficulty = true;
+                                var canBeFoundBasedOnTimeDifficulty = false;
                                 for(var k = 0; k < time.length; k++){
                                     var difficultyLevel = regionData[time[k]];
-                                    if(!difficulty.includes(difficultyLevel) && difficultyLevel > 0) canBeFoundBasedOnTimeDifficulty = false;
+                                    if(difficulty.includes(difficultyLevel) && difficultyLevel > 0) canBeFoundBasedOnTimeDifficulty = true;
                                 }
                                 if(canBeFoundBasedOnTimeDifficulty) foundWithinTimeSet = true;
                             }
                         }
                         if(!foundWithinRegions || !foundWithinTimeSet) meetsCriteria = false;
-                        if(meetsCriteria) filtered.push(mon);
+                        if(meetsCriteria){
+                            mon.added = 0;
+                            filtered.push(mon);
+                        }
                     }
                     return shuffleArray(filtered);
                     
@@ -248,6 +257,7 @@
                     var evoSpread = evolution === "Some" ? 15 : evolution === "Average" ? 30 : evolution === "Many" ? 50 : evolution === "All" ? 100 : 0;
                     var timeArr = ["Morn", "Day", "Nite"];
                     var time = allSelectedIdxs($("#time").children("input")).map(function(t){return timeArr[t];});
+                    if(!time.length) time = [timeArr[1]];
                     var eventPokemon = $("#misc").children("input:eq(0)").prop("checked");
                     var starterPokemon = $("#misc").children("input:eq(1)").prop("checked");
                     var legendaryDogs = $("#misc").children("input:eq(2)").prop("checked");
@@ -274,13 +284,13 @@
                             levelsOfDifficulty = spreadRandomly(difficulty, numPokemon);
                             break;
                         case "Favour Easy":
-                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 1);
+                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 0);
                             break;
                         case "Favour Medium":
-                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 2);
+                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 1);
                             break;
                         case "Favour Hard":
-                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 3);
+                            levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 2);
                             break;
                     }
                     var pokemonToDisplay = generatePokemon(filteredPokemon, pokemonInEachRegion, regions, levelsOfDifficulty, difficulty, evoSpread, numPokemon);
