@@ -47,22 +47,15 @@
                 <div>Legendary Birds</div><input type='checkbox' checked="true">
                 <div class="pre-select">Exclusives</div><select><option>None</option><option>Include</option><option selected>Split</option></select>
                 <div class="pre-select">Grid Size</div><select><option>3x3</option><option selected>5x5</option><option>7x7</option></select>
+                <div class="pre-select">Number of Cards</div><select><option>1</option><option selected>2</option></select>
             </div>
         </div>
-        <div id="main-container">
-            <div id="bingo-card"></div>
-        </div>
+        <div id="main-container"></div>
         <audio id="audio-element">
             <source src="audio/bingo.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
         <script>
-            var bingoContainer = $("#main-container");
-            var bingoCard = $("#bingo-card");
-            var tileX = 56;
-            var tileY = 56;
-            //Number in row of spritesheet
-            var numberInRow = 20;
             $.getJSON( "data/pokemon.json", function( data ) {
                 //Returns the pokemon's pokedex number, which corresponds to the sprite sheet position.
                 function generatePokemon(allPokemon, howManyInEachRegion, regions, difficultySpread, difficulty, evoSpread, numOfPokemon){
@@ -246,35 +239,7 @@
                     return shuffleArray(filtered);
                     
                 }
-                function generateBingoCard(){
-                    var regions = allSelectedIdxs($("#regions").children("input"));
-                    if(!regions.length) regions = [0];
-                    var regionSpread = $("#regions").children("select:eq(0)").val();
-                    var difficulty = allSelectedIdxs($("#difficulty").children("input")).map( function(value) { return value + 1; } );
-                    if(!difficulty.length) difficulty = [1];
-                    var diffSpread = $("#difficulty").children("select:eq(0)").val();
-                    var evolution = $("#evolve").children("select:eq(0)").val();
-                    var evoSpread = evolution === "Some" ? 15 : evolution === "Average" ? 30 : evolution === "Many" ? 50 : evolution === "All" ? 100 : 0;
-                    var timeArr = ["Morn", "Day", "Nite"];
-                    var time = allSelectedIdxs($("#time").children("input")).map(function(t){return timeArr[t];});
-                    if(!time.length) time = [timeArr[1]];
-                    var eventPokemon = $("#misc").children("input:eq(0)").prop("checked");
-                    var starterPokemon = $("#misc").children("input:eq(1)").prop("checked");
-                    var legendaryDogs = $("#misc").children("input:eq(2)").prop("checked");
-                    var legendaryBirds = $("#misc").children("input:eq(3)").prop("checked");
-                    var exclusives = $("#misc").children("select:eq(0)").val();
-                    var gridSize = $("#misc").children("select:eq(1)").val();
-                    
-                    var filteredPokemon = filterPokemon(data.pokemon, regions, difficulty, evolution, time, {event: eventPokemon, dogs: legendaryDogs, birds:legendaryBirds, starter: starterPokemon, exclusives: exclusives});
-                    
-                    var x = parseInt(gridSize[0]);
-                    var y = parseInt(gridSize[2]);
-                    var numPokemon = x * y;
-                    //How many pokemon from each region are selected (Either Spread Evenly or Random)
-                    //Gets an array in the form of [5, 5, 5, 5, 5] <- all regions selected in a 5x5 grid and spread evenly
-                    var pokemonInEachRegion = regionSpread === "Evenly" ? pokemonInEachRegion = spreadEvenly(regions, numPokemon) : pokemonInEachRegion = spreadRandomly(regions, numPokemon);
-                    
-                    //The spread of difficult to encounter pokemon
+                function getDifficulty(diffSpread, difficulty, numPokemon){
                     var levelsOfDifficulty = [];
                     switch(diffSpread){
                         case "Evenly":
@@ -293,41 +258,77 @@
                             levelsOfDifficulty = spreadWithFavour(difficulty, numPokemon, 2);
                             break;
                     }
-                    var pokemonToDisplay = generatePokemon(filteredPokemon, pokemonInEachRegion, regions, levelsOfDifficulty, difficulty, evoSpread, numPokemon);
-                    bingoCard.empty();
-                    if(!pokemonToDisplay) return;
-                    for(var i = 0;i < y; i++){
-                        for(var j = 0; j < x; j++){
-                            var bingoItem = $("<div class='bingo-item flex-vertical-aligned'></div>");
-                            var pokemon = pokemonToDisplay[i + j * x];
-                            
-                            if((pokemon.tag === "Version Exclusive" || pokemon.tag === "Legendary Bird") && exclusives === "Split"){
-                                var splits = getOtherVersionExclusive(pokemon);
-                                pokemon = splits[0];
-                                var id = pokemon.id;
-                                var xPos = id % numberInRow * tileX - tileX;
-                                var yPos = ~~((id - 1) / numberInRow) * tileY;
-                                var splitPokemon = splits[1];
-                                var splitid = splitPokemon.id;
-                                var splitxPos = splitid % numberInRow * tileX - tileX;
-                                var splityPos = ~~((splitid - 1) / numberInRow) * tileY;
-                                bingoItem.append("<div class='pokemon-id small-text'>"+"#"+id+" / #"+splitid+"</div>");
-                                bingoItem.append("<div class='pokemon-sprite-placeholder'></div><div class='pokemon-sprite-split'><div class='pokemon-sprite flipped-image' style='background-position:"+-xPos+"px "+-yPos+"px; position:absolute; right:20px;'></div>"+"<div class='pokemon-sprite' style='background-position:"+-splitxPos+"px "+-splityPos+"px; position:absolute; left:20px;'></div></div>")
-                                bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name.substring(0, 5)+"/"+splitPokemon.name.substring(0, 5)+"</div>");
-                                bingoCard.append(bingoItem);
-                            } else {
-                                var id = pokemon.id;
-                                var xPos = id % numberInRow * tileX - tileX;
-                                var yPos = ~~((id - 1) / numberInRow) * tileY;
-                                bingoItem.append("<div class='pokemon-id small-text'>"+"#"+id+"</div>");
-                                bingoItem.append("<div class='pokemon-sprite' style='background-position:"+-xPos+"px "+-yPos+"px;'></div>");
-                                bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name+"</div>");
-                                bingoCard.append(bingoItem);
+                    return levelsOfDifficulty;
+                }
+                function generateBingoCard(){
+                    $("#main-container").empty();
+                    var regions = allSelectedIdxs($("#regions").children("input"));
+                    if(!regions.length) regions = [0];
+                    var regionSpread = $("#regions").children("select:eq(0)").val();
+                    var difficulty = allSelectedIdxs($("#difficulty").children("input")).map( function(value) { return value + 1; } );
+                    if(!difficulty.length) difficulty = [1];
+                    var diffSpread = $("#difficulty").children("select:eq(0)").val();
+                    var evolution = $("#evolve").children("select:eq(0)").val();
+                    var evoSpread = evolution === "Some" ? 15 : evolution === "Average" ? 30 : evolution === "Many" ? 50 : evolution === "All" ? 100 : 0;
+                    var timeArr = ["Morn", "Day", "Nite"];
+                    var time = allSelectedIdxs($("#time").children("input")).map(function(t){return timeArr[t];});
+                    if(!time.length) time = [timeArr[1]];
+                    var eventPokemon = $("#misc").children("input:eq(0)").prop("checked");
+                    var starterPokemon = $("#misc").children("input:eq(1)").prop("checked");
+                    var legendaryDogs = $("#misc").children("input:eq(2)").prop("checked");
+                    var legendaryBirds = $("#misc").children("input:eq(3)").prop("checked");
+                    var exclusives = $("#misc").children("select:eq(0)").val();
+                    var gridSize = $("#misc").children("select:eq(1)").val();
+                    var numOfCards = parseInt($("#misc").children("select:eq(2)").val());
+                    
+                    var x = parseInt(gridSize[0]);
+                    var y = parseInt(gridSize[2]);
+                    var numPokemon = x * y;
+                    
+                    var tileX = 56;
+                    var tileY = 56;
+                    //Number in row of spritesheet
+                    var numberInRow = 20;
+                    
+                    for(var num = 0; num < numOfCards; num++){
+                        var bingoCard = $("<div class='bingo-card'></div>");
+                        var pokemonInEachRegion = regionSpread === "Evenly" ? pokemonInEachRegion = spreadEvenly(regions, numPokemon) : pokemonInEachRegion = spreadRandomly(regions, numPokemon);
+                        var levelsOfDifficulty = getDifficulty(diffSpread, difficulty, numPokemon);
+                        var filteredPokemon = filterPokemon(data.pokemon, regions, difficulty, evolution, time, {event: eventPokemon, dogs: legendaryDogs, birds:legendaryBirds, starter: starterPokemon, exclusives: exclusives});
+                        var pokemonToDisplay = generatePokemon(filteredPokemon, pokemonInEachRegion, regions, levelsOfDifficulty, difficulty, evoSpread, numPokemon);
+                        if(!pokemonToDisplay) return;
+                        for(var i = 0;i < y; i++){
+                            for(var j = 0; j < x; j++){
+                                var bingoItem = $("<div class='bingo-item flex-vertical-aligned'></div>");
+                                var pokemon = pokemonToDisplay[i + j * x];
+
+                                if((pokemon.tag === "Version Exclusive" || pokemon.tag === "Legendary Bird") && exclusives === "Split"){
+                                    var splits = getOtherVersionExclusive(pokemon);
+                                    pokemon = splits[0];
+                                    var id = pokemon.id;
+                                    var xPos = id % numberInRow * tileX - tileX;
+                                    var yPos = ~~((id - 1) / numberInRow) * tileY;
+                                    var splitPokemon = splits[1];
+                                    var splitid = splitPokemon.id;
+                                    var splitxPos = splitid % numberInRow * tileX - tileX;
+                                    var splityPos = ~~((splitid - 1) / numberInRow) * tileY;
+                                    bingoItem.append("<div class='pokemon-id small-text'>"+"#"+id+" / #"+splitid+"</div>");
+                                    bingoItem.append("<div class='pokemon-sprite-placeholder'></div><div class='pokemon-sprite-split'><div class='pokemon-sprite flipped-image' style='background-position:"+-xPos+"px "+-yPos+"px; position:absolute; right:20px;'></div>"+"<div class='pokemon-sprite' style='background-position:"+-splitxPos+"px "+-splityPos+"px; position:absolute; left:20px;'></div></div>")
+                                    bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name.substring(0, 5)+"/"+splitPokemon.name.substring(0, 5)+"</div>");
+                                    bingoCard.append(bingoItem);
+                                } else {
+                                    var id = pokemon.id;
+                                    var xPos = id % numberInRow * tileX - tileX;
+                                    var yPos = ~~((id - 1) / numberInRow) * tileY;
+                                    bingoItem.append("<div class='pokemon-id small-text'>"+"#"+id+"</div>");
+                                    bingoItem.append("<div class='pokemon-sprite' style='background-position:"+-xPos+"px "+-yPos+"px;'></div>");
+                                    bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name+"</div>");
+                                    bingoCard.append(bingoItem);
+                                }
                             }
                         }
+                        $("#main-container").append(bingoCard);
                     }
-                    $("#main-container").css("width", (x*100)+"px");
-                    $("#main-container").css("height", (y*100)+"px");
                 }
                 generateBingoCard();
                 $("#create-new-bingo-card").on("click",function(){

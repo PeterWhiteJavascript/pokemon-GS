@@ -81,20 +81,24 @@ html, body{
     transform:translate( -50%, 0);
 }
 #main-container{
-    width:500px;
+    width:1020px;
     height:500px;
-    left:50%;
+    left:calc(40px + 16%);
     top:60px;
     position:absolute;
-    background-color:#f2e394;
     border-radius: 20px;
-    transform:translate( -50%, 0);
+    display:flex;
+    flex-wrap: wrap;
 }
-#bingo-card{
-    width:100%;
-    height:100%;
+.bingo-card{
+    width:500px;
+    height:500px;
     display: flex;
     flex-wrap: wrap;
+    background-color:#f2e394;
+    border-radius: 20px;
+    margin-left:10px;
+    margin-top:10px;
 }
 .bingo-item{
     width:100px;
