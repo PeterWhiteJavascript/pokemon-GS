@@ -118,6 +118,18 @@
                         return data.pokemon.find(function(poke){return poke.name === name;});
                     }
                     switch(pokemon.name){
+                        case "Caterpie":
+                            return [pokemon, findPokemon("Weedle")];
+                        case "Metapod":
+                            return [pokemon, findPokemon("Kakuna")];
+                        case "Butterfree":
+                            return [pokemon, findPokemon("Beedrill")];
+                        case "Weedle":
+                            return [pokemon, findPokemon("Caterpie")];
+                        case "Kakuna":
+                            return [pokemon, findPokemon("Metapod")];
+                        case "Beedrill":
+                            return [pokemon, findPokemon("Butterfree")];
                         case "Ekans":
                             return [pokemon, findPokemon("Sandshrew")];
                         case "Arbok":

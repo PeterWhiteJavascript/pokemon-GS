@@ -5215,7 +5215,7 @@
         {
             "id": 15,
             "name": "Beedrill",
-            "tag": "Normal",
+            "tag": "Version Exclusive",
             "region": [
                 {
                     "Morn": 0,
@@ -5243,7 +5243,7 @@
         {
             "id": 14,
             "name": "Kakuna",
-            "tag": "Normal",
+            "tag": "Version Exclusive",
             "region": [
                 {
                     "Morn": 1,
@@ -5271,7 +5271,7 @@
         {
             "id": 13,
             "name": "Weedle",
-            "tag": "Normal",
+            "tag": "Version Exclusive",
             "region": [
                 {
                     "Morn": 1,
@@ -5299,7 +5299,7 @@
         {
             "id": 12,
             "name": "Butterfree",
-            "tag": "Normal",
+            "tag": "Version Exclusive",
             "region": [
                 {
                     "Morn": 0,
@@ -5327,7 +5327,7 @@
         {
             "id": 11,
             "name": "Metapod",
-            "tag": "Normal",
+            "tag": "Version Exclusive",
             "region": [
                 {
                     "Morn": 1,
@@ -5355,7 +5355,7 @@
         {
             "id": 10,
             "name": "Caterpie",
-            "tag": "Normal",
+            "tag": "Version Exclusive",
             "region": [
                 {
                     "Morn": 1,
