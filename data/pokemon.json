@@ -1113,7 +1113,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 3,
+                    "Nite": 4,
                     "evoOnly": 1,
                     "firstLv": 11,
                     "evoDiff": 4,
@@ -1122,7 +1122,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 3,
+                    "Nite": 4,
                     "evoOnly": 1,
                     "firstLv": 11,
                     "evoDiff": 4,
@@ -1148,7 +1148,7 @@
                 [],
                 {
                     "Morn": 0,
-                    "Day": 3,
+                    "Day": 4,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 11,
@@ -1157,7 +1157,7 @@
                 },
                 {
                     "Morn": 0,
-                    "Day": 3,
+                    "Day": 4,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 11,
@@ -1244,7 +1244,7 @@
                 [],
                 {
                     "Morn": 0,
-                    "Day": 3,
+                    "Day": 4,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 13,
@@ -1302,8 +1302,8 @@
             "tag": "Normal",
             "region": [
                 {
-                    "Morn": 3,
-                    "Day": 3,
+                    "Morn": 4,
+                    "Day": 4,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 27,
@@ -1311,8 +1311,8 @@
                     "specEnc": false
                 },
                 {
-                    "Morn": 3,
-                    "Day": 3,
+                    "Morn": 4,
+                    "Day": 4,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 27,
@@ -1338,8 +1338,8 @@
             "tag": "Normal",
             "region": [
                 {
-                    "Morn": 3,
-                    "Day": 3,
+                    "Morn": 4,
+                    "Day": 4,
                     "Nite": 0,
                     "evoOnly": 1,
                     "firstLv": 18,
@@ -4489,7 +4489,7 @@
                 {
                     "Morn": 0,
                     "Day": 0,
-                    "Nite": 3,
+                    "Nite": 4,
                     "evoOnly": 1,
                     "firstLv": 21,
                     "evoDiff": 4,

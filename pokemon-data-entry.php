@@ -32,7 +32,7 @@
                 transform:translate( -50%, 0);
                 display:flex;
             }
-            #main-container{
+            #main-cont{
                 width:100%;
                 height:auto;
                 border:1px solid black;
@@ -120,7 +120,7 @@
     <body>
         <div id="save" class="normal-text clickable">Save</div>
         <div id='main'>
-            <div id='main-container'></div>
+            <div id='main-cont'></div>
         </div>
         
         <script>
@@ -180,7 +180,7 @@
                                 <div class='region-data'></div>\n\
                             </div>\n\
                         </div>");
-                    $("#main-container").prepend(itm);
+                    $("#main-cont").prepend(itm);
                     if(pokemon){
                         itm.children("input:eq(0)").val(pokemon.id);
                         itm.children("input:eq(1)").val(pokemon.name);
@@ -231,7 +231,7 @@
                         pokemon:[]
                     };
                     function setData(){
-                        $($("#main-container").children(".itm").get().reverse()).each(function(){
+                        $($("#main-cont").children(".itm").get().reverse()).each(function(){
                             var id = parseInt($(this).children("input:eq(0)").val());
                             var name = $(this).children("input:eq(1)").val();
                             var tag = $(this).children("select:eq(0)").val();

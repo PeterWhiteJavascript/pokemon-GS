@@ -47,7 +47,7 @@
                 <div>Legendary Birds</div><input type='checkbox' checked="true">
                 <div class="pre-select">Exclusives</div><select><option>None</option><option>Include</option><option selected>Split</option></select>
                 <div class="pre-select">Grid Size</div><select><option>3x3</option><option selected>5x5</option><option>7x7</option></select>
-                <div class="pre-select">Number of Cards</div><select><option>1</option><option selected>2</option></select>
+                <div class="pre-select">Number of Cards</div><select><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option></select>
             </div>
         </div>
         <div id="main-container"></div>
@@ -217,11 +217,20 @@
                 }
                 //Gets all of the potential pokemon
                 function filterPokemon(pokemon, regions, difficulty, evolution, time, special){
+                    
                     var filtered = [];
+                    function addPokemon(poke){
+                        poke.added = 0;
+                        filtered.push(poke);
+                    }
                     for(var i = 0; i < pokemon.length; i++){
                         var meetsCriteria = true;
                         var mon = pokemon[i];
-                        if(!special.starter && mon.tag === "Starter") meetsCriteria = false;
+                        if(!special.starter && mon.tag === "Starter"){
+                            meetsCriteria = false;
+                        } else {
+                            addPokemon(pokemon[i]);
+                        }
                         if(!special.dogs && mon.tag === "Legendary Dog") meetsCriteria = false;
                         if(!special.birds && mon.tag === "Legendary Bird") meetsCriteria = false;
                         if(special.exclusives === "None" && mon.tag === "Version Exclusive") meetsCriteria = false;
@@ -243,10 +252,7 @@
                             }
                         }
                         if(!foundWithinRegions || !foundWithinTimeSet) meetsCriteria = false;
-                        if(meetsCriteria){
-                            mon.added = 0;
-                            filtered.push(mon);
-                        }
+                        if(meetsCriteria) addPokemon(pokemon[i]);
                     }
                     return shuffleArray(filtered);
                     
@@ -337,6 +343,15 @@
                                     bingoItem.append("<div class='pokemon-name small-text'>"+pokemon.name+"</div>");
                                     bingoCard.append(bingoItem);
                                 }
+                            }
+                            if(numPokemon === 9){
+                                $(bingoCard).css("width", "300px");
+                                $(bingoCard).css("height", "300px");
+                            } else if(numPokemon === 25){
+
+                            } else {
+                                $(bingoCard).css("width", "700px");
+                                $(bingoCard).css("height", "700px");
                             }
                         }
                         $("#main-container").append(bingoCard);
